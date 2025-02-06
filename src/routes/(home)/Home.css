@@ -1,0 +1,7 @@
+html {
+	background-color:  var(--color-softbg);
+}
+
+p {
+	color: var(--color-softtext)
+}

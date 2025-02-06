@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+@theme {
+	--color-softbg: #EEEEEE;
+	--color-softtext: #101010;
+
+
+}
+
+a {
+	text-decoration: underline;
+	font-weight: bold;
+}
