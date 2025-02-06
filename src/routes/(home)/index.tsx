@@ -9,8 +9,8 @@ export default function Home() {
       <div class="space-y-10">
         <h1 class="text-5xl font-bold text-softtext">aguywhosaguy.com</h1>
         <div class="space-y-3">
-          <p>Hello! I&#39;m aguywhosaguy. This is the website where I'll keep all of my projects in the nearby future.</p>
-          <p>I'm mostly focused on web development at the oment, but I'll occasionally make a random side project here and there.</p>
+          <p>Hello! I'm aguywhosaguy. This is the website where I'll keep all of my projects in the nearby future.</p>
+          <p>I'm mostly focused on web development at the moment, but I'll occasionally make a random side project here and there.</p>
           <p>Check out my GitHub below to see some of the things I work on, or the <a href="https://github.com/aguywhosaguy/aguywhosaguycom-solidstart">source code for this website.</a></p>
         </div>
       </div>
