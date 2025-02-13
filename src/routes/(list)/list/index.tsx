@@ -11,8 +11,6 @@ const getLevels = query(async () => {
 
 
 const List = () => {
-
-
 	const levels = createAsync(() => getLevels())
 
 	return (
