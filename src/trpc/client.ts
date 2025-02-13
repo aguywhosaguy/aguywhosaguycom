@@ -7,13 +7,15 @@ const getBaseUrl = () => {
   return `http://localhost:${process.env.PORT ?? 3000}`; // dev SSR should use localhost
 };
 
-console.debug(getBaseUrl())
-
 export const client = createTRPCClient<AppRouter>({
   links: [
-    loggerLink(),
     httpBatchLink({
       url: `${getBaseUrl()}/api/trpc`,
+      fetch: (url, options) => {
+        console.log('Making request to:', url);
+        console.log('With options:', options);
+        return fetch(url, options);
+      }
     }),
   ],
 });
