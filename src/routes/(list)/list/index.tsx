@@ -11,6 +11,7 @@ const List = () => {
 
 	return (
 		<div class="mx-auto my-5 w-4/5 space-y-5">
+			<Title>{title()}</Title>
 			<h1 class="text-white font-bold text-6xl my-10" on:mouseover={() => setTitle("Upside-Down UFO Platformer Challenge List")} on:mouseleave={() => setTitle("UDUFOPCL")}>
 				{title()}
 			</h1>
