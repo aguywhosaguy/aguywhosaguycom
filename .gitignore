@@ -14,6 +14,9 @@ app.config.timestamp_*.js
 # dependencies
 /node_modules
 
+# drizzle
+/drizzle
+
 # IDEs and editors
 /.idea
 .project

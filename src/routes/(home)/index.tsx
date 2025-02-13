@@ -1,8 +1,7 @@
 import { Title } from "@solidjs/meta";
 import "./Home.css"
 
-
-export default function Home() {
+const Home = () => {
   return (
     <main class="px-20 py-30 my-20 mx-auto max-w-6xl space-y-10">
       <Title>Home</Title>
@@ -21,6 +20,7 @@ export default function Home() {
         
       </footer>
     </main>
-
   );
 }
+
+export default Home;

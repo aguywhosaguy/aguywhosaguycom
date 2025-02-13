@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
-
 @theme {
 	--color-softbg: #EEEEEE;
 	--color-softtext: #101010;
-
-
+	--color-levelbg: #202020;
 }
 
 a {
