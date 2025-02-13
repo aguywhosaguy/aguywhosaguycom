@@ -7,6 +7,8 @@ const getBaseUrl = () => {
   return `http://localhost:${process.env.PORT ?? 3000}`; // dev SSR should use localhost
 };
 
+console.debug(getBaseUrl())
+
 export const client = createTRPCClient<AppRouter>({
   links: [
     loggerLink(),
