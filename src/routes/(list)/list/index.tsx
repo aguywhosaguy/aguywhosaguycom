@@ -1,15 +1,11 @@
 import { createAsync, query } from "@solidjs/router"
-import { asc } from "drizzle-orm"
 import { For, Suspense } from "solid-js"
 import Level from "~/components/Level"
-import db from "~/db/db"
-import { listTable } from "~/db/schema"
+import { client } from "~/trpc/client"
 
 const getLevels = query(async () => {
-	"use server"
-	const levels = await db.query.listTable.findMany({
-		orderBy: [asc(listTable.placement)]
-	})
+	const levels = await client.levels.list.query()
+
 	return levels
 }, "getlevels")
 

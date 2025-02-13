@@ -13,6 +13,8 @@
     "@solidjs/router": "^0.15.3",
     "@solidjs/start": "^1.0.11",
     "@tailwindcss/vite": "^4.0.3",
+    "@trpc/client": "^11.0.0-rc.764",
+    "@trpc/server": "^11.0.0-rc.764",
     "@xata.io/client": "^0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.3",
@@ -22,7 +24,8 @@
     "solid-three": "^0.2.0",
     "tailwindcss": "^4.0.3",
     "three": "^0.173.0",
-    "vinxi": "^0.4.3"
+    "vinxi": "^0.4.3",
+    "zod": "^3.24.2"
   },
   "engines": {
     "node": ">=18"
