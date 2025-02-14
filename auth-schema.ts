@@ -1,4 +1,4 @@
-import { pgTable, text, integer, timestamp, boolean, varchar } from "drizzle-orm/pg-core";
+import { pgTable, text, integer, timestamp, boolean } from "drizzle-orm/pg-core";
 			
 export const user = pgTable("user", {
 					id: text("id").primaryKey(),
@@ -45,21 +45,3 @@ export const verification = pgTable("verification", {
  createdAt: timestamp('created_at'),
  updatedAt: timestamp('updated_at')
 				});
-
-
-
-
-
-
-
-
-// MY schema
-
-export const listTable = pgTable("list", {
-  id: integer().primaryKey(),
-  name: varchar({ length: 20 }).notNull(),
-  creator: varchar({ length: 20 }).notNull(),
-  verifier: varchar({ length: 20 }).notNull(),
-  placement: integer(),
-});
-export type Levels = typeof listTable.$inferSelect

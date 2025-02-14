@@ -12,7 +12,7 @@ const ListLayout = (props: RouteSectionProps) => {
 	<div>
 		<Title>{title()}</Title>
 		<div class="mt-5 mx-5">
-			<a href="/list" class="!no-underline font-bold text-md text-white" on:mouseenter={() => setTitle("Upside-Down UFO Platformer Challenge List")} on:mouseleave={() => setTitle("UDUFOPCL")}>{title()}</a>
+			<a href="/list" class="!no-underline font-bold lg:text-4xl md:text-2xl text-xl text-white" on:mouseenter={() => setTitle("Upside-Down UFO Platformer Challenge List")} on:mouseleave={() => setTitle("UDUFOPCL")}>{title()}</a>
 		</div>
 		<div>
 			{props.children}
