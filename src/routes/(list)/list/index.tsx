@@ -25,7 +25,7 @@ const List = () => {
 	}
 
 	return (
-		<div class="flex flex-1 max-h-[90vh] overflow-hidden">
+		<div class="flex flex-1 h-[89vh] overflow-hidden">
 			<div class="mt-5 w-3/10">
 				<ErrorBoundary fallback={<div class="text-base-content ml-5">An error occured! Please <a href="/">bully me online</a> until I fix it.</div>}>
 					<Suspense fallback={<div class="text-base-content ml-5">Loading..</div>}>
@@ -42,7 +42,7 @@ const List = () => {
 							on:click={() => setLevel(undefined)}
 							>
 								<HiOutlineInformationCircle class="mr-5 flex-shrink-0" />
-								<h1 class="truncate lg:text-2xl lg:inline md:inline md:text-xl sm:hidden">Info</h1>
+								<h1 class="truncate  justify-center text-xs sm:text-md md:text-xl lg:text-2xl ">Info</h1>
 							</div>
 							<For each={filteredLevels()}>
 								{(level) => <Level level={level} setLevel={setLevel}/>}
