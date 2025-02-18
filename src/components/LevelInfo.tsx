@@ -5,9 +5,23 @@ interface LevelInfoProps {
 	level: Levels | undefined
 }
 
+interface PlaceholderImageProps {
+	message: string
+}
+
+const PlaceholderImage: Component<PlaceholderImageProps> = (props) => {
+	return (
+		<div 
+			class="w-3/4 aspect-[16/9] bg-base-300 flex justify-center items-center" 
+		>
+			{props.message}
+		</div>
+
+	)
+}
+
 
 const LevelInfo: Component<LevelInfoProps> = (props) => {
-	
 	return (
 		<div class="w-8/10 m-5 overflow-y-scroll">
 			<h1 class="lg:text-5xl md:text-3xl text-xl">
@@ -23,11 +37,11 @@ const LevelInfo: Component<LevelInfoProps> = (props) => {
 				<strong>Verified by </strong> {props.level?.verifier}
 			</h2>
 			<div class="mt-5 w-full">
-				<Show when={props.level?.url} fallback={<div class="w-full h-full bg-base-content"></div>}>
+				<Show when={props.level?.url} fallback={<PlaceholderImage message="No Image Available" />}>
 					<img 
 						src={props.level?.url || undefined} 
 						alt="Level Image" 
-						class="w-full h-auto"
+						class="w-3/4 h-auto"
 					/>
 				</Show>
 			</div>

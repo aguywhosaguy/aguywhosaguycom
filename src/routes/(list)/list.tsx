@@ -1,6 +1,6 @@
 import { RouteSectionProps } from "@solidjs/router"
 import { createSignal, onMount } from "solid-js"
-import { Title } from "@solidjs/meta"
+import { Link, MetaProvider, Title } from "@solidjs/meta"
 import { themeChange } from 'theme-change'
 
 
@@ -14,7 +14,11 @@ const ListLayout = (props: RouteSectionProps) => {
 
 	return (
 	<div class="flex flex-col h-screen">
-		<Title>{title()}</Title>
+		<MetaProvider>
+			<Title>{title()}</Title>
+			<Link rel="icon" href="/jimbo.png" />
+		</MetaProvider>
+
 		<div class="flex flex-col">
 			<div class="my-[0.25vh] mx-5 flex justify-between items-center h-[9vh]">
 				<a 
