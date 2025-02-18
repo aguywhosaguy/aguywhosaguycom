@@ -51,7 +51,7 @@ const List = () => {
 					</Suspense>
 				</ErrorBoundary>
 			</div>
-			<div class="w-7/10 mt-5 border-1 border-base-content">
+			<div class="w-7/10 mt-5 border-1 border-base-content overflow-y-scroll">
 				<Show when={level()} fallback={<ListInfo />}>
 					<LevelInfo level={level()} />
 				</Show>

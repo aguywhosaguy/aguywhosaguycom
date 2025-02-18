@@ -1,6 +1,6 @@
 const ListInfo = () => {
 	return (
-		<div class="w-4/5 h-full m-5 overflow-y-scroll">
+		<div class="w-4/5 h-full m-5 ">
 			<h1 class="lg:text-5xl md:text-3xl text-xl pb-1">
 				<strong>Welcome to the UDUFOPCL!</strong>
 			</h1>
