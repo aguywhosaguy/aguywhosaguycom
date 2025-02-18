@@ -61,5 +61,6 @@ export const listTable = pgTable("list", {
   creator: varchar({ length: 20 }).notNull(),
   verifier: varchar({ length: 20 }).notNull(),
   placement: integer(),
+  url: varchar()
 });
 export type Levels = typeof listTable.$inferSelect
