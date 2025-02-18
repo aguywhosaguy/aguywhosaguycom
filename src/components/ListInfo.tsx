@@ -1,6 +1,6 @@
 const ListInfo = () => {
 	return (
-		<div class="w-full h-full m-5 overflow-y-scroll">
+		<div class="w-4/5 h-full m-5 overflow-y-scroll">
 			<h1 class="lg:text-5xl md:text-3xl text-xl pb-1">
 				<strong>Welcome to the UDUFOPCL!</strong>
 			</h1>
@@ -12,8 +12,8 @@ const ListInfo = () => {
 			</h2>
 			<ol class="p-5 space-y-2 lg:text-xl md:text-lg text-md mb-3">
 				<li>1. Levels must be platformer, upside-down UFO only. You must start as UFO and start upside-down.</li>
-				<li>2. You may not have any <strong>required</strong> gravity or gamemode changes anywhere in the level. Dual mode is allowed, as long as both players are allowed by rule 1.</li>
-				<li>3. Levels must be under 60s.</li>
+				<li>2. You may not have any <strong>required</strong> gravity or gamemode changes anywhere in the level. Dual mode is allowed, as long as both players are allowed under rule 1.</li>
+				<li>3. Levels must be verified/beatable in under 60s.</li>
 				<li>4. Randomization is allowed, as long as it doesn't nerf/buff the level.</li>
 				<li>5. Gameplay must be mostly original.</li>
 				<li>6. No blind gameplay.</li>
