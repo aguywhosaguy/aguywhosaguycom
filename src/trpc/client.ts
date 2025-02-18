@@ -1,4 +1,4 @@
-import { createTRPCClient, httpBatchLink, loggerLink } from "@trpc/client";
+import { createTRPCClient, httpBatchLink } from "@trpc/client";
 import type { AppRouter } from "./routers/_app";
 
 export const getBaseUrl = () => {
@@ -12,5 +12,5 @@ export const client = createTRPCClient<AppRouter>({
     httpBatchLink({
       url: `${getBaseUrl()}/api/trpc`
     }),
-  ],
+  ]
 });

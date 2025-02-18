@@ -1,9 +1,13 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+	themes: coffee --default
+}
 
 @theme {
 	--color-softbg: #EEEEEE;
 	--color-softtext: #101010;
 	--color-levelbg: #202020;
+	--color-listbg: #111111;
 }
 
 a {
