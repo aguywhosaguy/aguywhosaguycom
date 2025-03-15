@@ -1,13 +1,7 @@
 // @refresh reload
 import { createHandler, StartServer } from "@solidjs/start/server";
-import { onMount } from "solid-js";
-import { themeChange } from "theme-change";
 
 export default createHandler(() => {
-  onMount(async () => {
-		themeChange()
-	})
-
   return (
       <StartServer
       document={({ assets, children, scripts }) => (

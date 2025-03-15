@@ -1,4 +1,4 @@
-import { initTRPC } from '@trpc/server'
+import { initTRPC, TRPCError } from '@trpc/server'
 import { auth } from '~/lib/auth';
 
 export const createContext = async (req: Request) => {
@@ -8,6 +8,8 @@ export const createContext = async (req: Request) => {
 		session: session
 	}
 }
+
+
 
 export type Context = Awaited<ReturnType<typeof createContext>>
 
@@ -20,9 +22,17 @@ export const publicProcedure = t.procedure;
 export const userProcedure = t.procedure.use(async function checkUser(opts) {
 	const { ctx, next } = opts
 
-	console.log(ctx)
+	if (!ctx.session || !ctx.session?.user) {
+		throw new TRPCError({
+			code: "UNAUTHORIZED"
+		})
+	}
 
-	return next()
+	return next({
+		ctx: {
+			user: ctx.session.user
+		}
+	})
 })
 
 export const mergeRouters = t.mergeRouters;

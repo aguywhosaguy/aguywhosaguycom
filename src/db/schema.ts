@@ -1,4 +1,5 @@
 import { pgTable, text, integer, timestamp, boolean, varchar } from "drizzle-orm/pg-core";
+import { createInsertSchema, createSelectSchema } from "drizzle-zod"
 			
 export const user = pgTable("user", {
 	id: text("id").primaryKey(),
@@ -65,4 +66,7 @@ export const listTable = pgTable("list", {
   placement: integer(),
   url: varchar()
 });
-export type Levels = typeof listTable.$inferSelect
+export type Levels = typeof listTable.$inferSelect;
+export type LevelsInsert = typeof listTable.$inferSelect
+export const LevelsSchema = createSelectSchema(listTable)
+export const LevelsInsertSchema = createInsertSchema(listTable)

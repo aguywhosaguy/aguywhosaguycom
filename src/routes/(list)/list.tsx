@@ -1,16 +1,11 @@
 import { RouteSectionProps } from "@solidjs/router"
-import { createSignal, onMount } from "solid-js"
+import { createSignal, Suspense } from "solid-js"
 import { Link, MetaProvider, Title } from "@solidjs/meta"
-import { themeChange } from 'theme-change'
+import Spinner from "~/components/Spinner"
 
 
 const ListLayout = (props: RouteSectionProps) => {
 	const [title, setTitle] = createSignal("UDUFOPCL")
-
-	onMount(async () => {
-		console.log("MOUNTED")
-		themeChange(false)
-	})
 
 	return (
 	<div class="flex flex-col h-screen">
@@ -22,22 +17,53 @@ const ListLayout = (props: RouteSectionProps) => {
 		<div class="flex flex-col">
 			<div class="my-[0.25vh] mx-5 flex justify-between items-center h-[9vh]">
 				<a 
-					href="/list" 
+					href="/list/levels" 
 					class="!no-underline font-bold lg:text-4xl md:text-2xl text-xl text-base-content" 
 					on:mouseenter={() => setTitle("Upside-Down UFO Platformer Challenge List")} 
 					on:mouseleave={() => setTitle("UDUFOPCL")}
 				>
 					{title()}
 				</a>
-				<select data-choose-theme class="select cursor-pointer h-3/5 w-1/10 relative top-0 right-0">
-					<option class="cursor-pointer rounded-none !hover:bg-white" value="">Night [Default]</option>
-					<option class="cursor-pointer rounded-none" value="nord">Nord</option>
-					<option class="cursor-pointer rounded-none" value="coffee">Coffee</option>
-				</select>
+				<div class="dropdown">
+					<div tabIndex={0} role="button" class="btn btn-sm m-1">
+						Theme
+					</div>
+					<ul tabIndex={0} class="dropdown-content bg-base-300 rounded-box z-1">
+						<li>
+							<input 
+								type="radio"
+								name="theme-dropdown"
+								class="theme-controller btn btn-sm btn-block justify-center"	
+								aria-label="Night"
+								value="night"
+							/>
+						</li>
+						<li>
+							<input 
+								type="radio"
+								name="theme-dropdown"
+								class="theme-controller btn btn-sm btn-block justify-center"	
+								aria-label="Nord"
+								value="nord"
+							/>
+						</li>
+						<li>
+							<input 
+								type="radio"
+								name="theme-dropdown"
+								class="theme-controller btn btn-sm btn-block justify-center"	
+								aria-label="Coffee"
+								value="coffee"
+							/>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<hr class="border-base-content border-[0.5vh]" />
 			<div class="flex-1">
-				{props.children}
+				<Suspense fallback={<Spinner />}>
+					{props.children}
+				</Suspense>
 			</div>
 
 		</div>
