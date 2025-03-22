@@ -34,8 +34,8 @@ const ListLayout = (props: RouteSectionProps) => {
 								type="radio"
 								name="theme-dropdown"
 								class="theme-controller btn btn-sm btn-block justify-center"	
-								aria-label="Night"
-								value="night"
+								aria-label="Sunset"
+								value="sunset"
 							/>
 						</li>
 						<li>
@@ -43,8 +43,8 @@ const ListLayout = (props: RouteSectionProps) => {
 								type="radio"
 								name="theme-dropdown"
 								class="theme-controller btn btn-sm btn-block justify-center"	
-								aria-label="Nord"
-								value="nord"
+								aria-label="silk"
+								value="silk"
 							/>
 						</li>
 						<li>
