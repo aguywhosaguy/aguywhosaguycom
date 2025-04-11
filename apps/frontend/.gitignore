@@ -12,10 +12,10 @@ app.config.timestamp_*.js
 .env*.local
 
 # dependencies
-/node_modules
+node_modules
 
 # drizzle
-/drizzle
+drizzle
 
 # IDEs and editors
 /.idea
