@@ -2,7 +2,8 @@
 	"$schema": "https://turbo.build/schema.json",
 	"tasks": {
 	  "build": {
-		"outputs": [".output/**"]
+		"outputs": [".output/**"],
+		"env": ["DATABASE_URL"]
 	  },
 	  "check-types": {
 		"dependsOn": ["^check-types"]

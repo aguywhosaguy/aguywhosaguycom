@@ -6,12 +6,6 @@ import SignUp from "~/components/SignUp"
 const Login = () => {
 	const [signUp, setPage] = createSignal(true)
 
-	//setPage(false)
-	createEffect(() => {
-		"use server"
-		console.log("Current page:", signUp() ? "Sign Up" : "Log In");
-	})
-
 	return (
 		<div class="mx-auto w-1/2">
 			<div class="join mx-auto mt-[5vh]">
