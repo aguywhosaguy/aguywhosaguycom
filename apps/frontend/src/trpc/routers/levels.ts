@@ -1,8 +1,8 @@
-import db from "~/db/db";
+import { db } from "~/lib/db";
 import { router, publicProcedure, userProcedure } from "../trpc";
 import { z } from "zod";
 import { and, asc, eq, gt, gte, lt, lte, sql } from "drizzle-orm";
-import { LevelsInsertSchema, LevelsSchema, listTable } from "~/db/schema";
+import { LevelsInsertSchema, LevelsSchema, listTable } from "@repo/database/schema";
 import { seed } from "drizzle-seed";
 import { TRPCError } from "@trpc/server";
 
