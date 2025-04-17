@@ -3,7 +3,7 @@
 	"tasks": {
 	  "build": {
 		"outputs": [".output/**", "dist/**"],
-		"env": ["DATABASE_URL"]
+		"env": ["DATABASE_URL", "MAILGUN_API_KEY"]
 	  },
 	  "check-types": {
 		"dependsOn": ["^check-types"]

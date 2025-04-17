@@ -55,7 +55,6 @@ updatedAt: timestamp('updated_at')
 
 
 
-
 // MY schema
 
 export const listTable = pgTable("list", {
@@ -66,6 +65,13 @@ export const listTable = pgTable("list", {
   placement: integer(),
   url: varchar()
 });
+
+export const accountsTable = pgTable("accounts", {
+	email: text('email').notNull().unique().primaryKey(),
+	rank: integer('rank').notNull()
+})
+
+
 export type Levels = typeof listTable.$inferSelect;
 export type LevelsInsert = typeof listTable.$inferSelect
 export const LevelsSchema = createSelectSchema(listTable)
