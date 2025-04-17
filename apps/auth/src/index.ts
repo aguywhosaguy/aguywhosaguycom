@@ -43,7 +43,7 @@ export default {
 									from: "auth@mail.aguywhosaguy.com",
 									to: email,
 									subject: "aguywhosaguy.com auth code",
-									text: "Your auth code is " + code + ". Don't share it with anyone. \nDo not reply to this email."
+									text: "your auth code is " + code + ". don't share it with anyone.\ndo not reply to this email."
 								})
 							} catch (error) {
 								console.log("EMAIL TIMED OUT !!")
