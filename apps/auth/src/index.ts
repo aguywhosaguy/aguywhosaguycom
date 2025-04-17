@@ -28,7 +28,7 @@ export default {
 		
 		const db = database(process.env.DATABASE_URL)
 		const mg = new Mailgun(FormData).client({username: "api", key: process.env.MAILGUN_API_KEY})
-		
+
 		const app = issuer({
 			providers: {
 				password: PasswordProvider(
@@ -43,7 +43,7 @@ export default {
 									from: "auth@mail.aguywhosaguy.com",
 									to: email,
 									subject: "aguywhosaguy.com auth code",
-									text: "Your auth code is " + code + ". Don't share it with anyone.\nDo not reply to this email."
+									text: "Your auth code is " + code + ". Don't share it with anyone. \nDo not reply to this email."
 								})
 							} catch (error) {
 								console.log("EMAIL TIMED OUT !!")
