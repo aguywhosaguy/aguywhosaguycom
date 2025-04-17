@@ -1,0 +1,11 @@
+{
+  "name": "@repo/auth",
+  "module": "src/auth.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
