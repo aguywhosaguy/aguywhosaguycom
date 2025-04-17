@@ -10,8 +10,9 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
+		"@repo/database": "workspace:*",
 		"@repo/subjects": "workspace:*",
-		"@repo/database": "workspace:*"
+		"mailgun.js": "^12.0.1"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.7.5",
