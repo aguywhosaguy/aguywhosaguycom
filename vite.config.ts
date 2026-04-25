@@ -1,15 +1,14 @@
-import { defineConfig } from "vite";
-import { nitroV2Plugin as nitro } from "@solidjs/vite-plugin-nitro-2";
 import tailwindcss from "@tailwindcss/vite"
 
-import { solidStart } from "@solidjs/start/config";
+import { defineConfig } from "@solidjs/start/config";
 
 export default defineConfig({
-  plugins: [
-    solidStart(),
-    nitro({
-      preset: "vercel"
-    }),
-    tailwindcss()
-  ]
+  vite: {
+    plugins: [
+      tailwindcss()
+    ]
+  },
+  server: {
+    preset: "bun" // Set to vercel on prod
+  }
 });
