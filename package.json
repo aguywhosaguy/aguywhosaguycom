@@ -1,5 +1,5 @@
 {
-  "name": "example-basic",
+  "name": "aguywhosaguycom",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
@@ -11,9 +11,12 @@
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "2.0.0-alpha.2",
+    "@solidjs/vite-plugin-nitro-2": "^0.1.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "daisyui": "^5.5.19",
     "solid-js": "^1.9.5",
-    "vite": "^7.0.0",
-    "@solidjs/vite-plugin-nitro-2": "^0.1.0"
+    "tailwindcss": "^4.2.2",
+    "vite": "^7.0.0"
   },
   "engines": {
     "node": ">=22"
