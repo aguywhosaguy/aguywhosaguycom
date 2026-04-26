@@ -12,11 +12,18 @@ type ProjectInfo = {
 
 const projects: ProjectInfo[] = [
   {
-    img: "https://picsum.photos/1920/1080",
+    img: "/etc/rusty3.jpg",
     name: "aguywhosaguy.com",
     date: new Date("4/24/26"),
     desc: "The third iteration of the website you're using right now. Powered by SolidStart!",
     repo: "https://github.com/aguywhosaguy/aguywhosaguycom"
+  },
+  {
+    img: "/thumbnails/tde.png",
+    name: "Thirty Dollar Extension",
+    date: new Date("8/14/24"),
+    desc: "A web extension for adding custom sounds to GDColon's thirtydollar.website.",
+    repo: "https://github.com/aguywhosaguy/thirtyDollarExtension"
   }
 ]
 
@@ -25,7 +32,7 @@ function Project(proj: ProjectInfo) {
 
 
   return (
-    <div class="flex h-48 border border-base-300">
+    <div class="flex h-48 mb-5 border border-base-300">
       <div class="hidden md:flex w-1/2">
         <Show when={proj.name == "aguywhosaguy.com"} fallback={<img class="m-auto aspect-video w-3/4" src={proj.img} />}>
           <div class="inline-flex md:text-xl items-center justify-center aspect-video m-auto w-3/4 bg-base-300">
