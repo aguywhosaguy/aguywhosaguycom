@@ -1,0 +1,3 @@
+# db
+
+Drizzle DB config
